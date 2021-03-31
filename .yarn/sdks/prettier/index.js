@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const {existsSync} = require(`fs`);
-const {createRequire, createRequireFromPath} = require(`module`);
-const {resolve, dirname} = require(`path`);
+const { existsSync } = require(`fs`);
+const { createRequire, createRequireFromPath } = require(`module`);
+const { resolve } = require(`path`);
 
-const relPnpApiPath = "../../../.pnp.js";
+const relPnpApiPath = '../../../.pnp.js';
 
 const absPnpApiPath = resolve(__dirname, relPnpApiPath);
 const absRequire = (createRequire || createRequireFromPath)(absPnpApiPath);
@@ -15,14 +15,23 @@ if (existsSync(absPnpApiPath)) {
     require(absPnpApiPath).setup();
   }
 
-  const pnpifyResolution = require.resolve(`@yarnpkg/pnpify`, {paths: [dirname(absPnpApiPath)]});
-  if (typeof global[`__yarnpkg_sdk_is_using_pnpify__`] === `undefined`) {
-    Object.defineProperty(global, `__yarnpkg_sdk_is_using_pnpify__`, {configurable: true, value: true});
+  let pnpifyResolution;
+  try {
+    pnpifyResolution = absRequire.resolve(`@yarnpkg/pnpify`);
+  } catch (err) {}
 
-    process.env.NODE_OPTIONS += ` -r ${pnpifyResolution}`;
+  if (pnpifyResolution) {
+    if (typeof global[`__yarnpkg_sdk_is_using_pnpify__`] === `undefined`) {
+      Object.defineProperty(global, `__yarnpkg_sdk_is_using_pnpify__`, {
+        configurable: true,
+        value: true,
+      });
 
-    // Apply PnPify to the current process
-    absRequire(pnpifyResolution).patchFs();
+      process.env.NODE_OPTIONS += ` -r ${pnpifyResolution}`;
+
+      // Apply PnPify to the current process
+      absRequire(pnpifyResolution).patchFs();
+    }
   }
 }
 
