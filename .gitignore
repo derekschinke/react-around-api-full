@@ -5,3 +5,19 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# System files and IDE settings folders
+.DS_Store
+.idea
+.vscode
