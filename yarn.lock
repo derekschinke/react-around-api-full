@@ -2962,6 +2962,7 @@ fsevents@~2.3.1:
     mongoose: ^5.12.3
     nodemon: ^2.0.7
     prettier: ^2.2.1
+    validator: ^13.5.2
   languageName: unknown
   linkType: soft
 
@@ -3801,6 +3802,13 @@ fsevents@~2.3.1:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 940899bd4eacfa012ceecb10a5814ba0e8103da5243aa74d0d62f1f8a405efcd23e034fb7193e2d05b392870c53aabcb1f66439b062075cdcb28bc5d562a8ff6
+  languageName: node
+  linkType: hard
+
+"validator@npm:^13.5.2":
+  version: 13.5.2
+  resolution: "validator@npm:13.5.2"
+  checksum: 6da12682ad43456cb3a97d23b35cad0b438d9027a6c6fd824d5c86fead42c28f4e38c67590d8f56ab44e6c612979cbaa5f5cc670cc5fcc5a39d5032fcb642296
   languageName: node
   linkType: hard
 
