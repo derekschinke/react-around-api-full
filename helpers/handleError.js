@@ -10,4 +10,4 @@ function handleError(err, res, model) {
   return res.status(500).send({ message: 'Internal Server Error' });
 }
 
-module.exports = handleError;
+export default handleError;

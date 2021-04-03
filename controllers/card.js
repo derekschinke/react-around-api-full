@@ -1,20 +1,20 @@
-const Card = require('../models/card');
+import Card from '../models/card';
 
-const handleError = require('../helpers/handleError');
+import handleError from '../helpers/handleError';
 
-module.exports.getCards = (req, res) =>
+export const getCards = (req, res) =>
   Card.find()
     .then((cards) => res.status(200).send(cards))
     .catch((err) => handleError(err, res, 'card'));
 
-module.exports.createCard = (req, res) => {
+export const createCard = (req, res) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })
     .then((card) => res.status(200).send(card))
     .catch((err) => handleError(err, res, 'card'));
 };
 
-module.exports.deleteCard = (req, res) =>
+export const deleteCard = (req, res) =>
   Card.findByIdAndDelete(req.params.id)
     .orFail(() =>
       res.status(404).send({ message: 'Not Found: card not found' })
@@ -22,7 +22,7 @@ module.exports.deleteCard = (req, res) =>
     .then((card) => res.status(200).send(card))
     .catch((err) => handleError(err, res, 'card'));
 
-module.exports.likeCard = (req, res) =>
+export const likeCard = (req, res) =>
   Card.findByIdAndUpdate(
     req.params.id,
     { $addToSet: { likes: req.user._id } },
@@ -34,7 +34,7 @@ module.exports.likeCard = (req, res) =>
     .then((card) => res.status(200).send(card))
     .catch((err) => handleError(err, res, 'card'));
 
-module.exports.unlikeCard = (req, res) =>
+export const unlikeCard = (req, res) =>
   Card.findByIdAndUpdate(
     req.params.id,
     { $pull: { likes: req.user._id } },
