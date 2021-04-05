@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const schema = mongoose.Schema(
   {
@@ -34,4 +34,4 @@ const schema = mongoose.Schema(
   { versionKey: false }
 );
 
-export default mongoose.model('card', schema);
+module.exports = mongoose.model('card', schema);

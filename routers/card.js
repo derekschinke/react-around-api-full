@@ -1,14 +1,12 @@
-import express from 'express';
+const router = require('express').Router();
 
-import {
+const {
   getCards,
   createCard,
   deleteCard,
   likeCard,
   unlikeCard,
-} from '../controllers/card';
-
-const router = express.Router();
+} = require('../controllers/card');
 
 router.get('/cards', getCards);
 router.post('/cards', createCard);
@@ -16,4 +14,4 @@ router.delete('/cards/:id', deleteCard);
 router.put('/cards/:id/likes', likeCard);
 router.delete('/cards/:id/likes', unlikeCard);
 
-export default router;
+module.exports = router;

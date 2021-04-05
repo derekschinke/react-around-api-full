@@ -1,13 +1,13 @@
-import User from '../models/user';
+const User = require('../models/user');
 
-import handleError from '../helpers/handleError';
+const handleError = require('../helpers/handleError');
 
-export const getUsers = (req, res) =>
+module.exports.getUsers = (req, res) =>
   User.find({})
     .then((users) => res.status(200).send(users))
     .catch((err) => handleError(err, res, 'user'));
 
-export const getUserById = (req, res) =>
+module.exports.getUserById = (req, res) =>
   User.findById(req.params.id)
     .orFail(() =>
       res.status(404).send({ message: 'Not Found: user not found' })
@@ -15,14 +15,14 @@ export const getUserById = (req, res) =>
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
 
-export const createUser = (req, res) => {
+module.exports.createUser = (req, res) => {
   const { name, about, avatar } = req.body;
   User.create({ name, about, avatar })
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
 };
 
-export const updateUser = (req, res) =>
+module.exports.updateUser = (req, res) =>
   User.findByIdAndUpdate(
     req.user._id,
     { $set: { name: req.body.name, about: req.body.about } },
@@ -34,7 +34,7 @@ export const updateUser = (req, res) =>
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
 
-export const updateAvatar = (req, res) =>
+module.exports.updateAvatar = (req, res) =>
   User.findByIdAndUpdate(
     req.user._id,
     { $set: { avatar: req.body.avatar } },
