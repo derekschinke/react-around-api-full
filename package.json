@@ -1,5 +1,10 @@
 {
   "name": "react-around-api-full",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.2.1",
