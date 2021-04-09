@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 const schema = mongoose.Schema(
   {
@@ -13,8 +14,12 @@ const schema = mongoose.Schema(
       required: true,
       validate: {
         validator(v) {
-          const regex = /^https?:\/\/(www\.)?[a-z0-9-]+\.[a-z]+[A-Za-z0-9-._~:/?#[\]@!$&'()*+,;%=]+#?$/;
-          return regex.test(v);
+          return validator.isURL(v, {
+            protocols: ['http', 'https'],
+            require_protocol: true,
+            require_valid_protocol: true,
+            validate_length: true,
+          });
         },
       },
     },
