@@ -2,18 +2,20 @@ const User = require('../models/user');
 
 const handleError = require('../helpers/handleError');
 
-module.exports.getUsers = (req, res) =>
+module.exports.getUsers = (req, res) => {
   User.find({})
     .then((users) => res.status(200).send(users))
     .catch((err) => handleError(err, res, 'user'));
+};
 
-module.exports.getUserById = (req, res) =>
+module.exports.getUserById = (req, res) => {
   User.findById(req.params.id)
     .orFail(() =>
       res.status(404).send({ message: 'Not Found: user not found' })
     )
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
+};
 
 module.exports.createUser = (req, res) => {
   const { name, about, avatar } = req.body;
@@ -22,7 +24,7 @@ module.exports.createUser = (req, res) => {
     .catch((err) => handleError(err, res, 'user'));
 };
 
-module.exports.updateUser = (req, res) =>
+module.exports.updateUser = (req, res) => {
   User.findByIdAndUpdate(
     req.user._id,
     { $set: { name: req.body.name, about: req.body.about } },
@@ -33,8 +35,9 @@ module.exports.updateUser = (req, res) =>
     )
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
+};
 
-module.exports.updateAvatar = (req, res) =>
+module.exports.updateAvatar = (req, res) => {
   User.findByIdAndUpdate(
     req.user._id,
     { $set: { avatar: req.body.avatar } },
@@ -45,3 +48,4 @@ module.exports.updateAvatar = (req, res) =>
     )
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
+};
