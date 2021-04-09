@@ -7,17 +7,17 @@ const schema = new mongoose.Schema(
       type: String,
       minLength: 2,
       maxLength: 30,
-      required: true,
+      default: 'Jacques Cousteau',
     },
     about: {
       type: String,
       minLength: 2,
       maxLength: 30,
-      required: true,
+      default: 'Explorer',
     },
     avatar: {
       type: String,
-      required: true,
+      default: 'https://pictures.s3.yandex.net/resources/avatar_1604080799.jpg',
       validate: {
         validator(v) {
           return validator.isURL(v, {
@@ -29,6 +29,8 @@ const schema = new mongoose.Schema(
         },
       },
     },
+    email: { type: String, required: true },
+    password: { required: true },
   },
   { versionKey: false }
 );
