@@ -53,3 +53,21 @@ module.exports.updateAvatar = (req, res) => {
     .then((user) => res.status(200).send(user))
     .catch((err) => handleError(err, res, 'user'));
 };
+
+module.exports.login = (req, res) => {
+  const { email, password } = req.body;
+  User.findOne({ email })
+    .then((user) => {
+      if (!user) {
+        return Promise.reject(new Error('Incorrect password or email'));
+      }
+      return bcrypt.compare(password, user.password);
+    })
+    .then((matched) => {
+      if (!matched) {
+        return Promise.reject(new Error('Incorrect password or email'));
+      }
+      return res.send({ message: 'Everything good!' });
+    })
+    .catch((err) => handleError(err, res, 'user'));
+};

@@ -13,14 +13,13 @@ const schema = new mongoose.Schema(
       type: String,
       required: true,
       validate: {
-        validator(v) {
-          return validator.isURL(v, {
+        validator: (url) =>
+          validator.isURL(url, {
             protocols: ['http', 'https'],
             require_protocol: true,
             require_valid_protocol: true,
             validate_length: true,
-          });
-        },
+          }),
       },
     },
     owner: {

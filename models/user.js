@@ -22,18 +22,22 @@ const schema = new mongoose.Schema(
       required: true,
       default: 'https://pictures.s3.yandex.net/resources/avatar_1604080799.jpg',
       validate: {
-        validator(v) {
-          return validator.isURL(v, {
+        validator: (url) =>
+          validator.isURL(url, {
             protocols: ['http', 'https'],
             require_protocol: true,
             require_valid_protocol: true,
             validate_length: true,
-          });
-        },
+          }),
       },
     },
-    email: { type: String, required: true },
-    password: { required: true },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      validate: { validator: (email) => validator.isEmail(email) },
+    },
+    password: { type: String, required: true },
   },
   { versionKey: false }
 );
