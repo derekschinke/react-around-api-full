@@ -37,7 +37,7 @@ const schema = new mongoose.Schema(
       unique: true,
       validate: { validator: (email) => validator.isEmail(email) },
     },
-    password: { type: String, required: true },
+    password: { type: String, required: true, select: false },
   },
   { versionKey: false }
 );
