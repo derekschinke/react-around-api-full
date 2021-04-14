@@ -1127,6 +1127,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "dotenv@npm:8.2.0"
+  checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
+  languageName: node
+  linkType: hard
+
 "duplexer3@npm:^0.1.4":
   version: 0.1.4
   resolution: "duplexer3@npm:0.1.4"
@@ -3618,6 +3625,7 @@ fsevents@~2.3.1:
     bcrypt: ^5.0.1
     celebrate: ^14.0.0
     cors: ^2.8.5
+    dotenv: ^8.2.0
     eslint: ^7.24.0
     eslint-config-airbnb-base: ^14.2.1
     eslint-config-prettier: ^8.2.0
