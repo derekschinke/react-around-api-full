@@ -26,8 +26,6 @@ const schema = new mongoose.Schema(
           validator.isURL(url, {
             protocols: ['http', 'https'],
             require_protocol: true,
-            require_valid_protocol: true,
-            validate_length: true,
           }),
       },
     },
