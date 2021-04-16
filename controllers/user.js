@@ -6,7 +6,6 @@ const BadRequestError = require('../errors/BadRequestError');
 const ConflictError = require('../errors/ConflictError');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 const NotFoundError = require('../errors/NotFoundError');
-// const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const User = require('../models/user');
 
@@ -64,18 +63,22 @@ module.exports.updateUser = (req, res, next) => {
     .catch(next);
 };
 
-// module.exports.updateAvatar = (req, res) => {
-//   User.findByIdAndUpdate(
-//     req.user._id,
-//     { $set: { avatar: req.body.avatar } },
-//     { new: true, runValidators: true }
-//   )
-//     .orFail(() =>
-//       res.status(404).send({ message: 'Not Found: user not found' })
-//     )
-//     .then((user) => res.status(200).send(user))
-//     .catch((err) => handleError(err, res, 'user'));
-// };
+module.exports.updateAvatar = (req, res, next) => {
+  const { avatar } = req.body;
+  User.findByIdAndUpdate(
+    { _id: req.user._id },
+    { $set: { avatar } },
+    { new: true, runValidators: true }
+  )
+    .then((user) => res.send({ data: user }))
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        throw new BadRequestError('Unable to update avatar');
+      }
+      next(err);
+    })
+    .catch(next);
+};
 
 module.exports.login = (req, res, next) => {
   const { email, password } = req.body;

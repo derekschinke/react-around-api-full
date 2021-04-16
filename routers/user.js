@@ -5,7 +5,7 @@ const {
   getUsers,
   getUserById,
   updateUser,
-  // updateAvatar,
+  updateAvatar,
 } = require('../controllers/user');
 
 const TOKEN_REGEX = /^(Bearer )[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_.+/=]*$/;
@@ -45,6 +45,19 @@ router.patch(
   updateUser
 );
 
-// router.patch('/users/me/avatar', updateAvatar);
+router.patch(
+  '/me/avatar',
+  celebrate({
+    headers: Joi.object()
+      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .options({ allowUnknown: true }),
+    body: Joi.object().keys({
+      avatar: Joi.string()
+        .uri({ scheme: ['http', 'https'] })
+        .required(),
+    }),
+  }),
+  updateAvatar
+);
 
 module.exports = router;
