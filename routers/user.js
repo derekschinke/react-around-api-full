@@ -4,7 +4,7 @@ const { celebrate, Joi } = require('celebrate');
 const {
   getUsers,
   getUserById,
-  // updateUser,
+  updateUser,
   // updateAvatar,
 } = require('../controllers/user');
 
@@ -31,7 +31,20 @@ router.get(
   getUserById
 );
 
-// router.patch('/users/me', updateUser);
+router.patch(
+  '/me',
+  celebrate({
+    headers: Joi.object()
+      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .options({ allowUnknown: true }),
+    body: Joi.object().keys({
+      name: Joi.string().min(2).max(30).required(),
+      about: Joi.string().min(2).max(30).required(),
+    }),
+  }),
+  updateUser
+);
+
 // router.patch('/users/me/avatar', updateAvatar);
 
 module.exports = router;

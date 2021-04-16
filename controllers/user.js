@@ -11,7 +11,6 @@ const NotFoundError = require('../errors/NotFoundError');
 const User = require('../models/user');
 
 dotenv.config();
-
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
@@ -49,18 +48,21 @@ module.exports.createUser = (req, res, next) => {
     .catch(next);
 };
 
-// module.exports.updateUser = (req, res) => {
-//   User.findByIdAndUpdate(
-//     req.user._id,
-//     { $set: { name: req.body.name, about: req.body.about } },
-//     { new: true, runValidators: true }
-//   )
-//     .orFail(() =>
-//       res.status(404).send({ message: 'Not Found: user not found' })
-//     )
-//     .then((user) => res.status(200).send(user))
-//     .catch((err) => handleError(err, res, 'user'));
-// };
+module.exports.updateUser = (req, res, next) => {
+  const { name, about } = req.body;
+  User.findByIdAndUpdate(
+    { _id: req.user._id },
+    { $set: { name, about } },
+    { new: true, runValidators: true }
+  )
+    .then((user) => res.send({ data: user }))
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        throw new BadRequestError('Unable to update user');
+      }
+    })
+    .catch(next);
+};
 
 // module.exports.updateAvatar = (req, res) => {
 //   User.findByIdAndUpdate(
