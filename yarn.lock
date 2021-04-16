@@ -1369,9 +1369,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "eslint-plugin-prettier@npm:3.3.1"
+"eslint-plugin-prettier@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "eslint-plugin-prettier@npm:3.4.0"
   dependencies:
     prettier-linter-helpers: ^1.0.0
   peerDependencies:
@@ -1380,7 +1380,7 @@ __metadata:
   peerDependenciesMeta:
     eslint-config-prettier:
       optional: true
-  checksum: cf35b0f0e9ef30782fe82913db92f6874181723d77f0c4613f9d69c87069f73d0dc420ef850ebc844613c00a8e87eb9762a36b7d028334c5c7b091763118347b
+  checksum: 322be1af8c7a6b7f1c718d912090722b65da072fda05bbc0a9d94523e6c3dfda49a7f62fd411126f1909c12bbc63e827ee6459163b2ce3458adb292541decf66
   languageName: node
   linkType: hard
 
@@ -2937,14 +2937,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongodb@npm:3.6.5":
-  version: 3.6.5
-  resolution: "mongodb@npm:3.6.5"
+"mongodb@npm:3.6.6":
+  version: 3.6.6
+  resolution: "mongodb@npm:3.6.6"
   dependencies:
     bl: ^2.2.1
     bson: ^1.1.4
     denque: ^1.4.1
-    require_optional: ^1.0.1
+    optional-require: ^1.0.2
     safe-buffer: ^5.1.2
     saslprep: ^1.0.0
   dependenciesMeta:
@@ -2963,7 +2963,7 @@ fsevents@~2.3.1:
       optional: true
     snappy:
       optional: true
-  checksum: 6a838b79e104cee243e2ed10a5ded90490bb4db687ca1f1cabeab6c578441b1db64136fd33bad7112ca4a09e60a99a3b039d1c11e515521ffffa66ed91fb3148
+  checksum: 7c711f82269a98fc331e5d52d3ba02167446d7a44c54f0ab26072d708a804c5082e201abae85dcf01154ac73572e4e7f80f32c0b632b72e92e8e65857f553062
   languageName: node
   linkType: hard
 
@@ -2976,14 +2976,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.12.3, mongoose@npm:^5.12.3":
-  version: 5.12.3
-  resolution: "mongoose@npm:5.12.3"
+"mongoose@npm:5.12.4, mongoose@npm:^5.12.4":
+  version: 5.12.4
+  resolution: "mongoose@npm:5.12.4"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
     kareem: 2.3.2
-    mongodb: 3.6.5
+    mongodb: 3.6.6
     mongoose-legacy-pluralize: 1.0.2
     mpath: 0.8.3
     mquery: 3.2.5
@@ -2992,7 +2992,7 @@ fsevents@~2.3.1:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 50e05e10571347562ffe2df29f797446954c257fe0ae6f2075136af214aacf58a698a9a5d8ebe45aa44d010ea8b490bfc64670cb222336fa859c3a3863bb5b72
+  checksum: 8965a43e3202f6458e181be0f69198d6382de76f728cc7b733fe169371e08750ef483f6f58dbf353892cde3e42133b973c1add7a8375e78f2e410b372a328efa
   languageName: node
   linkType: hard
 
@@ -3289,6 +3289,13 @@ fsevents@~2.3.1:
   dependencies:
     fn.name: 1.x.x
   checksum: f1efa31ce3e3ec54cd0d05dff9690bff1f14e96ee8fee27b52bfac372c659f07ab5df0c068d8aab06ca2c86c4bca810a98c65920c35f2c32c2ddb8226d0b307c
+  languageName: node
+  linkType: hard
+
+"optional-require@npm:^1.0.2":
+  version: 1.0.3
+  resolution: "optional-require@npm:1.0.3"
+  checksum: be8556c35b0f6f76ac3b34587f010ad8fc17f69d1afbd5198fb338c785ebbe8e3c96b5f5222a0853b2c8ab7bfe8127a4f4c795e8795d5656e31c8fd693780ba9
   languageName: node
   linkType: hard
 
@@ -3631,11 +3638,11 @@ fsevents@~2.3.1:
     eslint-config-prettier: ^8.2.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-prettier: ^3.3.1
+    eslint-plugin-prettier: ^3.4.0
     express: ^4.17.1
     express-winston: ^4.1.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^5.12.3
+    mongoose: ^5.12.4
     node-gyp: ^8.0.0
     nodemon: ^2.0.7
     prettier: ^2.2.1
@@ -3767,23 +3774,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"require_optional@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "require_optional@npm:1.0.1"
-  dependencies:
-    resolve-from: ^2.0.0
-    semver: ^5.1.0
-  checksum: 2a7cae14fcb0f7aac9e1837bde2edc1e95b2cf635376df09e973151ea735b77f2069e6bf9e1a1c5dd27f052e0b00a477db15807302a1ceeb487307ea61416bee
-  languageName: node
-  linkType: hard
-
-"resolve-from@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "resolve-from@npm:2.0.0"
-  checksum: e2cfa9d4402ceb731ce14f639248c8a8a364db8710ba3360a4492046c6688084235645a4f4004ac7d9acf40bc0644fac6d8c24f9012c7e5773234a7c09d57cb4
-  languageName: node
-  linkType: hard
-
 "resolve-from@npm:^4.0.0":
   version: 4.0.0
   resolution: "resolve-from@npm:4.0.0"
@@ -3877,7 +3867,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.1.0, semver@npm:^5.6.0, semver@npm:^5.7.1":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.6.0, semver@npm:^5.7.1":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:
