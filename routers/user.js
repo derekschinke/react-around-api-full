@@ -3,7 +3,7 @@ const { celebrate, Joi } = require('celebrate');
 
 const {
   getUsers,
-  // getUserById,
+  getUserById,
   // updateUser,
   // updateAvatar,
 } = require('../controllers/user');
@@ -20,16 +20,16 @@ router.get(
   getUsers
 );
 
-// router.get(
-//   '/:id',
-//   celebrate({
-//     headers: Joi.object()
-//       .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
-//       .options({ allowUnknown: true }),
-//     params: Joi.object().keys({ id: Joi.string().required().alphanum() }),
-//   }),
-//   getUserById
-// );
+router.get(
+  '/:id',
+  celebrate({
+    headers: Joi.object()
+      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .options({ allowUnknown: true }),
+    params: Joi.object().keys({ id: Joi.string().alphanum().required() }),
+  }),
+  getUserById
+);
 
 // router.patch('/users/me', updateUser);
 // router.patch('/users/me/avatar', updateAvatar);

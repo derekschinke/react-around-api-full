@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const BadRequestError = require('../errors/BadRequestError');
 const ConflictError = require('../errors/ConflictError');
 const UnauthorizedError = require('../errors/UnauthorizedError');
-// const NotFoundError = require('../errors/NotFoundError');
+const NotFoundError = require('../errors/NotFoundError');
 // const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const User = require('../models/user');
@@ -16,19 +16,23 @@ const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
-    .select('+password')
+    .select('-password')
     .then((user) => res.send({ data: user }))
     .catch(next);
 };
 
-// module.exports.getUserById = (req, res) => {
-//   User.findById(req.params.id)
-//     .orFail(() =>
-//       res.status(404).send({ message: 'Not Found: user not found' })
-//     )
-//     .then((user) => res.status(200).send(user))
-//     .catch((err) => handleError(err, res, 'user'));
-// };
+module.exports.getUserById = (req, res, next) => {
+  User.findById(req.params.id === 'me' ? req.user._id : req.params.id)
+    .select('-password')
+    .then((user) => res.send({ data: user }))
+    .catch((err) => {
+      if (err.name === 'CastError' || err.name === 'TypeError') {
+        throw new NotFoundError('User not found');
+      }
+      next(err);
+    })
+    .catch(next);
+};
 
 module.exports.createUser = (req, res, next) => {
   const { name, about, avatar, email, password } = req.body;
