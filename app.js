@@ -6,7 +6,7 @@ const cors = require('cors');
 const auth = require('./middleware/auth');
 
 const userRouter = require('./routers/user');
-// const cardRouter = require('./routers/card');
+const cardRouter = require('./routers/card');
 
 const { createUser, login } = require('./controllers/user');
 
@@ -28,7 +28,7 @@ app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/users', auth, userRouter);
-// app.use('/cards', auth, cardRouter);
+app.use('/cards', auth, cardRouter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {

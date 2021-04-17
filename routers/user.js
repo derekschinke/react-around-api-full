@@ -8,13 +8,13 @@ const {
   updateAvatar,
 } = require('../controllers/user');
 
-const TOKEN_REGEX = /^(Bearer )[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_.+/=]*$/;
+const BEARER_REGEX = require('../utils/constants');
 
 router.get(
   '/',
   celebrate({
     headers: Joi.object()
-      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
       .options({ allowUnknown: true }),
   }),
   getUsers
@@ -24,7 +24,7 @@ router.get(
   '/:id',
   celebrate({
     headers: Joi.object()
-      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
       .options({ allowUnknown: true }),
     params: Joi.object().keys({ id: Joi.string().alphanum().required() }),
   }),
@@ -35,7 +35,7 @@ router.patch(
   '/me',
   celebrate({
     headers: Joi.object()
-      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
       .options({ allowUnknown: true }),
     body: Joi.object().keys({
       name: Joi.string().min(2).max(30).required(),
@@ -49,7 +49,7 @@ router.patch(
   '/me/avatar',
   celebrate({
     headers: Joi.object()
-      .keys({ authorization: Joi.string().regex(TOKEN_REGEX).required() })
+      .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
       .options({ allowUnknown: true }),
     body: Joi.object().keys({
       avatar: Joi.string()
