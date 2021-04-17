@@ -1,5 +1,7 @@
 const router = require('express').Router();
 
+// const BEARER_REGEX = require('../utils/constants');
+
 const {
   getCards,
   // createCard,
@@ -8,9 +10,7 @@ const {
   // unlikeCard,
 } = require('../controllers/card');
 
-// const BEARER_REGEX = require('../utils/constants');
-
-router.get('/cards', getCards);
+router.get('/', getCards);
 // router.post('/cards', createCard);
 // router.delete('/cards/:id', deleteCard);
 // router.put('/cards/:id/likes', likeCard);

@@ -4,8 +4,9 @@ const dotenv = require('dotenv');
 
 const BadRequestError = require('../errors/BadRequestError');
 const ConflictError = require('../errors/ConflictError');
-const UnauthorizedError = require('../errors/UnauthorizedError');
+const InternalServerError = require('../errors/InternalServerError');
 const NotFoundError = require('../errors/NotFoundError');
+const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const User = require('../models/user');
 
@@ -63,8 +64,11 @@ module.exports.login = (req, res, next) => {
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
-    .then((user) => {
-      res.send({ data: user });
+    .then((users) => {
+      res.send({ data: users });
+    })
+    .catch(() => {
+      throw new InternalServerError('An error has occurred on the server');
     })
     .catch(next);
 };

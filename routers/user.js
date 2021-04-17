@@ -1,14 +1,14 @@
 const router = require('express').Router();
 const { celebrate, Joi } = require('celebrate');
 
+const { BEARER_REGEX } = require('../utils/constants');
+
 const {
   getUsers,
   getUserById,
   updateUser,
   updateAvatar,
 } = require('../controllers/user');
-
-const BEARER_REGEX = require('../utils/constants');
 
 router.get(
   '/',

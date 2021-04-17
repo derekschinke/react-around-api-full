@@ -1,11 +1,15 @@
 const Card = require('../models/card');
 
+const InternalServerError = require('../errors/InternalServerError');
+
 module.exports.getCards = (req, res, next) => {
   Card.find({})
     .then((cards) => {
-      res.status(200).send(cards);
+      res.status(200).send({ data: cards });
     })
-    .catch(() => {})
+    .catch(() => {
+      throw new InternalServerError('An error has occurred on the server');
+    })
     .catch(next);
 };
 
