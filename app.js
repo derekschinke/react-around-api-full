@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const { celebrate, Joi, errors } = require('celebrate');
 const cors = require('cors');
 
+const { requestLogger, errorLogger } = require('./middleware/logger');
+
 const auth = require('./middleware/auth');
 
 const userRouter = require('./routers/users');
@@ -26,6 +28,8 @@ app.options('*', cors());
 
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
+
+app.use(requestLogger);
 
 app.use('/users', auth, userRouter);
 app.use('/cards', auth, cardRouter);
@@ -59,6 +63,8 @@ app.post(
   }),
   login
 );
+
+app.use(errorLogger);
 
 app.use(errors());
 
