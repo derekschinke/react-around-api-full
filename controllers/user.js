@@ -17,7 +17,9 @@ module.exports.createUser = (req, res, next) => {
   bcrypt
     .hash(password, 10)
     .then((hash) => User.create({ name, about, avatar, email, password: hash }))
-    .then((user) => res.send({ data: user }))
+    .then((user) => {
+      res.send({ data: user });
+    })
     .catch((err) => {
       if (err.name === 'ValidationError') {
         throw new BadRequestError('Unable to create user');
@@ -61,13 +63,17 @@ module.exports.login = (req, res, next) => {
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
-    .then((user) => res.send({ data: user }))
+    .then((user) => {
+      res.send({ data: user });
+    })
     .catch(next);
 };
 
 module.exports.getUserById = (req, res, next) => {
   User.findById(req.params.id === 'me' ? req.user._id : req.params.id)
-    .then((user) => res.send({ data: user }))
+    .then((user) => {
+      res.send({ data: user });
+    })
     .catch((err) => {
       if (err.name === 'CastError' || err.name === 'TypeError') {
         throw new NotFoundError('User not found');
@@ -84,7 +90,9 @@ module.exports.updateUser = (req, res, next) => {
     { $set: { name, about } },
     { new: true, runValidators: true }
   )
-    .then((user) => res.send({ data: user }))
+    .then((user) => {
+      res.send({ data: user });
+    })
     .catch((err) => {
       if (err.name === 'ValidationError') {
         throw new BadRequestError('Unable to update user');
@@ -100,7 +108,9 @@ module.exports.updateAvatar = (req, res, next) => {
     { $set: { avatar } },
     { new: true, runValidators: true }
   )
-    .then((user) => res.send({ data: user }))
+    .then((user) => {
+      res.send({ data: user });
+    })
     .catch((err) => {
       if (err.name === 'ValidationError') {
         throw new BadRequestError('Unable to update avatar');
