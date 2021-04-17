@@ -23,7 +23,7 @@ module.exports.createCard = (req, res, next) => {
       res.status(201).send(card);
     })
     .catch((err) => {
-      if (err.name === 'Validation Error') {
+      if (err.name === 'ValidationError') {
         throw new BadRequestError('Unable to create card');
       }
     })
@@ -44,7 +44,7 @@ module.exports.deleteCard = (req, res, next) => {
       }
     })
     .catch((err) => {
-      if (err.name === 'CastError') {
+      if (err.statusCode === 404) {
         throw new NotFoundError('Card not found');
       }
     })
@@ -65,7 +65,7 @@ module.exports.likeCard = (req, res, next) => {
       }
     })
     .catch((err) => {
-      if (err.name === 'CastError' || err.statusCode === 404) {
+      if (err.statusCode === 404) {
         throw new NotFoundError('Card not found');
       }
     })
