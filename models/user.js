@@ -1,29 +1,41 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 const schema = new mongoose.Schema(
   {
     name: {
       type: String,
-      minlength: 2,
-      maxlength: 30,
+      minLength: 2,
+      maxLength: 30,
       required: true,
+      default: 'Jacques Cousteau',
     },
     about: {
       type: String,
-      minlength: 2,
-      maxlength: 30,
+      minLength: 2,
+      maxLength: 30,
       required: true,
+      default: 'Explorer',
     },
     avatar: {
       type: String,
       required: true,
+      default: 'https://pictures.s3.yandex.net/resources/avatar_1604080799.jpg',
       validate: {
-        validator(v) {
-          const regex = /^https?:\/\/(www\.)?[a-z0-9-]+\.[a-z]+[A-Za-z0-9-._~:/?#[\]@!$&'()*+,;%=]+#?$/;
-          return regex.test(v);
-        },
+        validator: (url) =>
+          validator.isURL(url, {
+            protocols: ['http', 'https'],
+            require_protocol: true,
+          }),
       },
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      validate: { validator: (email) => validator.isEmail(email) },
+    },
+    password: { type: String, required: true, select: false },
   },
   { versionKey: false }
 );

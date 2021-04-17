@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
-const schema = mongoose.Schema(
+const schema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -12,19 +13,22 @@ const schema = mongoose.Schema(
       type: String,
       required: true,
       validate: {
-        validator(v) {
-          const regex = /^https?:\/\/(www\.)?[a-z0-9-]+\.[a-z]+[A-Za-z0-9-._~:/?#[\]@!$&'()*+,;%=]+#?$/;
-          return regex.test(v);
-        },
+        validator: (url) =>
+          validator.isURL(url, {
+            protocols: ['http', 'https'],
+            require_protocol: true,
+          }),
       },
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
+      ref: 'user',
       required: true,
     },
     likes: {
       type: [mongoose.Schema.Types.ObjectId],
       default: [],
+      ref: 'user',
     },
     createdAt: {
       type: Date,
