@@ -5,10 +5,10 @@ const cors = require('cors');
 
 const auth = require('./middleware/auth');
 
-const userRouter = require('./routers/user');
-const cardRouter = require('./routers/card');
+const userRouter = require('./routers/users');
+const cardRouter = require('./routers/cards');
 
-const { createUser, login } = require('./controllers/user');
+const { createUser, login } = require('./controllers/users');
 
 const { PORT = 3000 } = process.env;
 
