@@ -1,5 +1,6 @@
 const Card = require('../models/card');
 
+const BadRequestError = require('../errors/BadRequestError');
 const InternalServerError = require('../errors/InternalServerError');
 
 module.exports.getCards = (req, res, next) => {
@@ -13,12 +14,19 @@ module.exports.getCards = (req, res, next) => {
     .catch(next);
 };
 
-// module.exports.createCard = (req, res) => {
-//   const { name, link } = req.body;
-//   Card.create({ name, link, owner: req.user._id })
-//     .then((card) => res.status(200).send(card))
-//     .catch((err) => handleError(err, res, 'card'));
-// };
+module.exports.createCard = (req, res, next) => {
+  const { name, link } = req.body;
+  Card.create({ name, link, owner: req.user._id })
+    .then((card) => {
+      res.status(201).send(card);
+    })
+    .catch((err) => {
+      if (err.name === 'Validation Error') {
+        throw new BadRequestError('Unable to create card');
+      }
+    })
+    .catch(next);
+};
 
 // module.exports.deleteCard = (req, res) => {
 //   Card.findByIdAndDelete(req.params.id)
