@@ -51,18 +51,26 @@ module.exports.deleteCard = (req, res, next) => {
     .catch(next);
 };
 
-// module.exports.likeCard = (req, res) => {
-//   Card.findByIdAndUpdate(
-//     req.params.id,
-//     { $addToSet: { likes: req.user._id } },
-//     { new: true, runValidators: true }
-//   )
-//     .orFail(() =>
-//       res.status(404).send({ message: 'Not Found: card not found' })
-//     )
-//     .then((card) => res.status(200).send(card))
-//     .catch((err) => handleError(err, res, 'card'));
-// };
+module.exports.likeCard = (req, res, next) => {
+  Card.findByIdAndUpdate(
+    req.params.id,
+    { $addToSet: { likes: req.user._id } },
+    { new: true, runValidators: true }
+  )
+    .then((card) => {
+      if (card) {
+        res.status(200).send(card);
+      } else if (!card) {
+        throw new NotFoundError('Card not found');
+      }
+    })
+    .catch((err) => {
+      if (err.name === 'CastError' || err.statusCode === 404) {
+        throw new NotFoundError('Card not found');
+      }
+    })
+    .catch(next);
+};
 
 // module.exports.unlikeCard = (req, res) => {
 //   Card.findByIdAndUpdate(

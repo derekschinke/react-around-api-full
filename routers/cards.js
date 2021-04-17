@@ -7,7 +7,7 @@ const {
   getCards,
   createCard,
   deleteCard,
-  // likeCard,
+  likeCard,
   // unlikeCard,
 } = require('../controllers/cards');
 
@@ -41,7 +41,17 @@ router.delete(
   deleteCard
 );
 
-// router.put('/cards/:id/likes', likeCard);
+router.put(
+  '/likes/:id',
+  celebrate({
+    headers: Joi.object()
+      .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
+      .options({ allowUnknown: true }),
+    params: Joi.object().keys({ id: Joi.string().length(24).hex().required() }),
+  }),
+  likeCard
+);
+
 // router.delete('/cards/:id/likes', unlikeCard);
 
 module.exports = router;
