@@ -26,7 +26,7 @@ router.get(
     headers: Joi.object()
       .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
       .options({ allowUnknown: true }),
-    params: Joi.object().keys({ id: Joi.string().alphanum().required() }),
+    params: Joi.object().keys({ id: Joi.string().length(24).hex().required() }),
   }),
   getUserById
 );

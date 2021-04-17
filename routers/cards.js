@@ -6,7 +6,7 @@ const { BEARER_REGEX } = require('../utils/constants');
 const {
   getCards,
   createCard,
-  // deleteCard,
+  deleteCard,
   // likeCard,
   // unlikeCard,
 } = require('../controllers/cards');
@@ -30,7 +30,17 @@ router.post(
   createCard
 );
 
-// router.delete('/cards/:id', deleteCard);
+router.delete(
+  '/:id',
+  celebrate({
+    headers: Joi.object()
+      .keys({ authorization: Joi.string().regex(BEARER_REGEX).required() })
+      .options({ allowUnknown: true }),
+    params: Joi.object().keys({ id: Joi.string().length(24).hex().required() }),
+  }),
+  deleteCard
+);
+
 // router.put('/cards/:id/likes', likeCard);
 // router.delete('/cards/:id/likes', unlikeCard);
 

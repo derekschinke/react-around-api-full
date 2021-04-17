@@ -1,7 +1,9 @@
-const Card = require('../models/card');
-
 const BadRequestError = require('../errors/BadRequestError');
 const InternalServerError = require('../errors/InternalServerError');
+const NotFoundError = require('../errors/NotFoundError');
+const UnauthorizedError = require('../errors/UnauthorizedError');
+
+const Card = require('../models/card');
 
 module.exports.getCards = (req, res, next) => {
   Card.find({})
@@ -28,14 +30,26 @@ module.exports.createCard = (req, res, next) => {
     .catch(next);
 };
 
-// module.exports.deleteCard = (req, res) => {
-//   Card.findByIdAndDelete(req.params.id)
-//     .orFail(() =>
-//       res.status(404).send({ message: 'Not Found: card not found' })
-//     )
-//     .then((card) => res.status(200).send(card))
-//     .catch((err) => handleError(err, res, 'card'));
-// };
+module.exports.deleteCard = (req, res, next) => {
+  Card.findById(req.params.id)
+    .then((card) => {
+      if (card && req.user._id.toString() === card.owner.toString()) {
+        Card.deleteOne(card).then((deletedCard) => {
+          res.status(200).send(deletedCard);
+        });
+      } else if (!card) {
+        throw new NotFoundError('Card not found');
+      } else {
+        throw new UnauthorizedError('Authorization required');
+      }
+    })
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        throw new NotFoundError('Card not found');
+      }
+    })
+    .catch(next);
+};
 
 // module.exports.likeCard = (req, res) => {
 //   Card.findByIdAndUpdate(
