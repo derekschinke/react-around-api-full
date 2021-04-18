@@ -11,7 +11,6 @@ const UnauthorizedError = require('../errors/UnauthorizedError');
 const User = require('../models/user');
 
 dotenv.config();
-
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports.createUser = (req, res, next) => {
