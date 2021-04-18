@@ -1419,7 +1419,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-negative-zero", "npm:2.0.1"],
             ["is-regex", "npm:1.1.2"],
             ["is-string", "npm:1.0.5"],
-            ["object-inspect", "npm:1.10.1"],
+            ["object-inspect", "npm:1.10.2"],
             ["object-keys", "npm:1.1.1"],
             ["object.assign", "npm:4.1.2"],
             ["string.prototype.trimend", "npm:1.0.4"],
@@ -3538,10 +3538,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["object-inspect", [
-        ["npm:1.10.1", {
-          "packageLocation": "./.yarn/cache/object-inspect-npm-1.10.1-22b6334cef-0f82fc5129.zip/node_modules/object-inspect/",
+        ["npm:1.10.2", {
+          "packageLocation": "./.yarn/cache/object-inspect-npm-1.10.2-ad1a73f626-2bb89d63fd.zip/node_modules/object-inspect/",
           "packageDependencies": [
-            ["object-inspect", "npm:1.10.1"]
+            ["object-inspect", "npm:1.10.2"]
           ],
           "linkType": "HARD",
         }]
@@ -4384,10 +4384,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["socks", [
-        ["npm:2.6.0", {
-          "packageLocation": "./.yarn/cache/socks-npm-2.6.0-4283b0e975-f670b49b29.zip/node_modules/socks/",
+        ["npm:2.6.1", {
+          "packageLocation": "./.yarn/cache/socks-npm-2.6.1-09133d0d22-9a5735cf9b.zip/node_modules/socks/",
           "packageDependencies": [
-            ["socks", "npm:2.6.0"],
+            ["socks", "npm:2.6.1"],
             ["ip", "npm:1.1.5"],
             ["smart-buffer", "npm:4.1.0"]
           ],
@@ -4401,7 +4401,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["socks-proxy-agent", "npm:5.0.0"],
             ["agent-base", "npm:6.0.2"],
             ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.2"],
-            ["socks", "npm:2.6.0"]
+            ["socks", "npm:2.6.1"]
           ],
           "linkType": "HARD",
         }]
