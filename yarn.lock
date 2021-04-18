@@ -61,9 +61,9 @@ __metadata:
   linkType: hard
 
 "@hapi/hoek@npm:^9.0.0":
-  version: 9.1.1
-  resolution: "@hapi/hoek@npm:9.1.1"
-  checksum: e5be371c579bcdef755566b88ccd6bbf5c52ad2cc770e134ee909156cdcff2acf7aad3f4b5400d83742a27acc580a00a82d2cde8c812db0b0437e4e80fa0a6a0
+  version: 9.2.0
+  resolution: "@hapi/hoek@npm:9.2.0"
+  checksum: c68d43f3fa7de4d53362c38ed5927e7872394bd80cd8d500a8b6c705da92ad9d37106df72d97a63417270fb186e2ad0b147bc31d61b9cdba614987bf8f1ba1ae
   languageName: node
   linkType: hard
 
@@ -2973,9 +2973,9 @@ fsevents@~2.3.1:
   linkType: hard
 
 "object-inspect@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "object-inspect@npm:1.9.0"
-  checksum: 63b412167d716e332b3233090a9e8cc7951479a6971629fb8a3d00135a2329136c697fbd2f56e48bb132928f01bd0f8c5fe2d7386222f217228ca697b8c3932a
+  version: 1.10.1
+  resolution: "object-inspect@npm:1.10.1"
+  checksum: 0f82fc51295c9cd6fe808652e4a0c4d094c23afcb24f1e81e4405f15d1a36248f469f828e52b7d941b36767eb7a244672509ee26bd1b0083651119f54eb8708f
   languageName: node
   linkType: hard
 
