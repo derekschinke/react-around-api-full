@@ -80,7 +80,7 @@ app.use('*', (req, res) =>
   res.status(404).send({ message: 'Requested resource not found' })
 );
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`App listening at port ${PORT}`);
 });
