@@ -1,6 +1,11 @@
 {
   "name": "react-around-api-full",
   "main": "app.js",
+  "engines": {
+    "node": "15.x",
+    "npm": "7.x",
+    "yarn": "2.x"
+  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"

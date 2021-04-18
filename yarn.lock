@@ -2973,9 +2973,9 @@ fsevents@~2.3.1:
   linkType: hard
 
 "object-inspect@npm:^1.9.0":
-  version: 1.10.1
-  resolution: "object-inspect@npm:1.10.1"
-  checksum: 0f82fc51295c9cd6fe808652e4a0c4d094c23afcb24f1e81e4405f15d1a36248f469f828e52b7d941b36767eb7a244672509ee26bd1b0083651119f54eb8708f
+  version: 1.10.2
+  resolution: "object-inspect@npm:1.10.2"
+  checksum: 2bb89d63fde8e5dc8ee255aa783308477c614204a12b5568e4646a3032fd75600ead57769f3e0557c7fed51ab4fe4f54f6998b77a0832c3e5b61974d67f3f705
   languageName: node
   linkType: hard
 
@@ -3727,12 +3727,12 @@ fsevents@~2.3.1:
   linkType: hard
 
 "socks@npm:^2.3.3":
-  version: 2.6.0
-  resolution: "socks@npm:2.6.0"
+  version: 2.6.1
+  resolution: "socks@npm:2.6.1"
   dependencies:
     ip: ^1.1.5
     smart-buffer: ^4.1.0
-  checksum: f670b49b2931d1388c1fcf292af9bbd3e607eefb40b1cde762a43ca7475a15f3c14aab9418de71b8ff2e65a8174e5e22392fbbbd01610885cd56722deae4380e
+  checksum: 9a5735cf9be6f756006b4c5ed23f17c15ffbfc0afb04b5d1b49516b7a27818c807a6a5b5419a65a140a1964149ec9ebb6cd8f0e06d7c60282912204d781371db
   languageName: node
   linkType: hard
 
