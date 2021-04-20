@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-gyp", "npm:8.0.0"],
             ["nodemon", "npm:2.0.7"],
             ["prettier", "npm:2.2.1"],
-            ["validator", "npm:13.5.2"],
+            ["validator", "npm:13.6.0"],
             ["winston", "npm:3.3.3"]
           ],
           "linkType": "SOFT",
@@ -4023,7 +4023,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-gyp", "npm:8.0.0"],
             ["nodemon", "npm:2.0.7"],
             ["prettier", "npm:2.2.1"],
-            ["validator", "npm:13.5.2"],
+            ["validator", "npm:13.6.0"],
             ["winston", "npm:3.3.3"]
           ],
           "linkType": "SOFT",
@@ -4961,10 +4961,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["validator", [
-        ["npm:13.5.2", {
-          "packageLocation": "./.yarn/cache/validator-npm-13.5.2-a981b4609f-6da12682ad.zip/node_modules/validator/",
+        ["npm:13.6.0", {
+          "packageLocation": "./.yarn/cache/validator-npm-13.6.0-2ca88b50f3-6ae43bfd47.zip/node_modules/validator/",
           "packageDependencies": [
-            ["validator", "npm:13.5.2"]
+            ["validator", "npm:13.6.0"]
           ],
           "linkType": "HARD",
         }]

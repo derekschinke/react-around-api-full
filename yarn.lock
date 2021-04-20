@@ -3382,7 +3382,7 @@ fsevents@~2.3.1:
     node-gyp: ^8.0.0
     nodemon: ^2.0.7
     prettier: ^2.2.1
-    validator: ^13.5.2
+    validator: ^13.6.0
     winston: ^3.3.3
   languageName: unknown
   linkType: soft
@@ -4237,10 +4237,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"validator@npm:^13.5.2":
-  version: 13.5.2
-  resolution: "validator@npm:13.5.2"
-  checksum: 6da12682ad43456cb3a97d23b35cad0b438d9027a6c6fd824d5c86fead42c28f4e38c67590d8f56ab44e6c612979cbaa5f5cc670cc5fcc5a39d5032fcb642296
+"validator@npm:^13.6.0":
+  version: 13.6.0
+  resolution: "validator@npm:13.6.0"
+  checksum: 6ae43bfd47ae7e3ed5803c6fff949c5cbabb4d248af38fce0ccafb637c85db8c0c5cee2a91817242865de4f5970d61de809f0975910ec78282307ffd23249466
   languageName: node
   linkType: hard
 
