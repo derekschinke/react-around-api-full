@@ -789,10 +789,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.1.0", {
-          "packageLocation": "./.yarn/cache/chalk-npm-4.1.0-c746e252ba-f860285b41.zip/node_modules/chalk/",
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/chalk-npm-4.1.1-f1ce6bae57-445c12db7a.zip/node_modules/chalk/",
           "packageDependencies": [
-            ["chalk", "npm:4.1.0"],
+            ["chalk", "npm:4.1.1"],
             ["ansi-styles", "npm:4.3.0"],
             ["supports-color", "npm:7.2.0"]
           ],
@@ -1476,7 +1476,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/code-frame", "npm:7.12.11"],
             ["@eslint/eslintrc", "npm:0.4.0"],
             ["ajv", "npm:6.12.6"],
-            ["chalk", "npm:4.1.0"],
+            ["chalk", "npm:4.1.1"],
             ["cross-spawn", "npm:7.0.3"],
             ["debug", "virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.2"],
             ["doctrine", "npm:3.0.0"],
