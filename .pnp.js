@@ -141,10 +141,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@mapbox/node-pre-gyp", [
-        ["npm:1.0.3", {
-          "packageLocation": "./.yarn/cache/@mapbox-node-pre-gyp-npm-1.0.3-d1e5b2d0fc-9673b13af2.zip/node_modules/@mapbox/node-pre-gyp/",
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/@mapbox-node-pre-gyp-npm-1.0.4-b262be8310-591616bcc7.zip/node_modules/@mapbox/node-pre-gyp/",
           "packageDependencies": [
-            ["@mapbox/node-pre-gyp", "npm:1.0.3"],
+            ["@mapbox/node-pre-gyp", "npm:1.0.4"],
             ["detect-libc", "npm:1.0.3"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["make-dir", "npm:3.1.0"],
@@ -567,7 +567,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/bcrypt-npm-5.0.1-6815be1cfe/node_modules/bcrypt/",
           "packageDependencies": [
             ["bcrypt", "npm:5.0.1"],
-            ["@mapbox/node-pre-gyp", "npm:1.0.3"],
+            ["@mapbox/node-pre-gyp", "npm:1.0.4"],
             ["node-addon-api", "npm:3.1.0"]
           ],
           "linkType": "HARD",
@@ -1507,7 +1507,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.3.5"],
             ["strip-ansi", "npm:6.0.0"],
             ["strip-json-comments", "npm:3.1.1"],
-            ["table", "npm:6.3.1"],
+            ["table", "npm:6.3.2"],
             ["text-table", "npm:0.2.0"],
             ["v8-compile-cache", "npm:2.3.0"]
           ],
@@ -4652,10 +4652,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["table", [
-        ["npm:6.3.1", {
-          "packageLocation": "./.yarn/cache/table-npm-6.3.1-1baa5e3eac-0d1020f030.zip/node_modules/table/",
+        ["npm:6.3.2", {
+          "packageLocation": "./.yarn/cache/table-npm-6.3.2-4f4c276a65-8c016c3f92.zip/node_modules/table/",
           "packageDependencies": [
-            ["table", "npm:6.3.1"],
+            ["table", "npm:6.3.2"],
             ["ajv", "npm:8.1.0"],
             ["is-boolean-object", "npm:1.1.0"],
             ["is-number-object", "npm:1.0.4"],
