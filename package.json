@@ -2,7 +2,7 @@
   "name": "react-around-api-full",
   "main": "app.js",
   "engines": {
-    "node": "15.x",
+    "node": "16.x",
     "npm": "7.x",
     "yarn": "2.x"
   },
