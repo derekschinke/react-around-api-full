@@ -17,7 +17,9 @@ module.exports.createUser = (req, res, next) => {
     .hash(password, 10)
     .then((hash) => User.create({ name, about, avatar, email, password: hash }))
     .then((user) => {
-      res.status(201).send({ data: user });
+      const cleanedUser = user.toObject();
+      delete cleanedUser.password;
+      res.status(201).send({ data: cleanedUser });
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
