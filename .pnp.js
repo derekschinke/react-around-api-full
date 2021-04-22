@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-rate-limit", "npm:5.2.6"],
             ["express-slow-down", "npm:1.4.0"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
+            ["helmet", "npm:4.5.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.5"],
             ["nodemon", "npm:2.0.7"],
@@ -2252,6 +2253,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["helmet", [
+        ["npm:4.5.0", {
+          "packageLocation": "./.yarn/cache/helmet-npm-4.5.0-3542ad91ae-e7245be78a.zip/node_modules/helmet/",
+          "packageDependencies": [
+            ["helmet", "npm:4.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["hosted-git-info", [
         ["npm:2.8.9", {
           "packageLocation": "./.yarn/cache/hosted-git-info-npm-2.8.9-62c44fa93f-cf4dfac9b9.zip/node_modules/hosted-git-info/",
@@ -4059,6 +4069,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-rate-limit", "npm:5.2.6"],
             ["express-slow-down", "npm:1.4.0"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
+            ["helmet", "npm:4.5.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.5"],
             ["nodemon", "npm:2.0.7"],
