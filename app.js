@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { celebrate, Joi, errors } = require('celebrate');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const slowDown = require('express-slow-down');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -42,6 +43,14 @@ const limiter = rateLimit({
   max: 100,
 });
 app.use(limiter);
+
+app.enable('trust proxy');
+const speedLimiter = slowDown({
+  windowMs: 15 * 60 * 1000,
+  delayAfter: 100,
+  delayMs: 500,
+});
+app.use(speedLimiter);
 
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
