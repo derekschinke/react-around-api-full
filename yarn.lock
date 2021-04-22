@@ -1431,6 +1431,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-rate-limit@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "express-rate-limit@npm:5.2.6"
+  checksum: 03cfcd8b039b08be5ffa1edbdc9b0a2eb5199ba4687bfb6d52e7327827eb1e17f612f497ffd6182e1521438cc18ea0bce062500e21af2ce0b2a0b2b59946cd8f
+  languageName: node
+  linkType: hard
+
 "express-winston@npm:^4.1.0":
   version: 4.1.0
   resolution: "express-winston@npm:4.1.0"
@@ -3376,6 +3383,7 @@ fsevents@~2.3.1:
     eslint-plugin-import: ^2.22.1
     eslint-plugin-prettier: ^3.4.0
     express: ^4.17.1
+    express-rate-limit: ^5.2.6
     express-winston: ^4.1.0
     jsonwebtoken: ^8.5.1
     mongoose: ^5.12.5

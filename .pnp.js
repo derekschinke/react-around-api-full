@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:2.22.1"],
             ["eslint-plugin-prettier", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:3.4.0"],
             ["express", "npm:4.17.1"],
+            ["express-rate-limit", "npm:5.2.6"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.5"],
@@ -1797,6 +1798,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-is", "npm:1.6.18"],
             ["utils-merge", "npm:1.0.1"],
             ["vary", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["express-rate-limit", [
+        ["npm:5.2.6", {
+          "packageLocation": "./.yarn/cache/express-rate-limit-npm-5.2.6-c458b4bca7-03cfcd8b03.zip/node_modules/express-rate-limit/",
+          "packageDependencies": [
+            ["express-rate-limit", "npm:5.2.6"]
           ],
           "linkType": "HARD",
         }]
@@ -4016,6 +4026,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:2.22.1"],
             ["eslint-plugin-prettier", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:3.4.0"],
             ["express", "npm:4.17.1"],
+            ["express-rate-limit", "npm:5.2.6"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.5"],
