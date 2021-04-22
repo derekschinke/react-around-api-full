@@ -2,6 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { celebrate, Joi, errors } = require('celebrate');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const { requestLogger, errorLogger } = require('./middleware/logger');
 
