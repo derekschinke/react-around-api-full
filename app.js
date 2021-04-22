@@ -12,16 +12,19 @@ const cardRouter = require('./routers/cards');
 
 const { createUser, login } = require('./controllers/users');
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3001, MONGO_SECRET } = process.env;
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/arounddb', {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  `mongodb+srv://derekschinke:${MONGO_SECRET}@arounddb.0zhvm.mongodb.net/arounddb?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  }
+);
 
 app.use(cors());
 app.options('*', cors());
