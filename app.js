@@ -14,6 +14,7 @@ const userRouter = require('./routers/users');
 const cardRouter = require('./routers/cards');
 
 const { createUser, login } = require('./controllers/users');
+const NotFoundError = require('./errors/NotFoundError');
 
 const { PORT = 3001, NODE_ENV, MONGO_SECRET } = process.env;
 
@@ -76,6 +77,10 @@ app.use(errorLogger);
 
 app.use(errors());
 
+app.use('*', (req, res, next) =>
+  next(new NotFoundError('Requested resource not found'))
+);
+
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   const { statusCode = 500, message } = err;
@@ -83,10 +88,6 @@ app.use((err, req, res, next) => {
     message: statusCode === 500 ? 'An error occurred on the server' : message,
   });
 });
-
-app.use('*', (req, res) =>
-  res.status(404).send({ message: 'Requested resource not found' })
-);
 
 app.listen(process.env.PORT || PORT, () => {
   // eslint-disable-next-line no-console
