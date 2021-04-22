@@ -77,8 +77,8 @@ __metadata:
   linkType: hard
 
 "@mapbox/node-pre-gyp@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "@mapbox/node-pre-gyp@npm:1.0.3"
+  version: 1.0.4
+  resolution: "@mapbox/node-pre-gyp@npm:1.0.4"
   dependencies:
     detect-libc: ^1.0.3
     https-proxy-agent: ^5.0.0
@@ -91,7 +91,7 @@ __metadata:
     tar: ^6.1.0
   bin:
     node-pre-gyp: bin/node-pre-gyp
-  checksum: 9673b13af29da2e0a71beaebf01ea8110db7b913e357689e33149ade3170306ee4e517ff0f2bba51604dbf00b95564c293b2dec5c6989bd463fd6ab74af06310
+  checksum: 591616bcc7d7857e09601f4ad9dfe543c944baab7b637d7106174fc329305c4c85188a249d4c3af0c8358d7003e7799fea588f8755cc5901e00786cac6fa9783
   languageName: node
   linkType: hard
 
@@ -646,12 +646,12 @@ __metadata:
   linkType: hard
 
 "chalk@npm:^4.0.0":
-  version: 4.1.0
-  resolution: "chalk@npm:4.1.0"
+  version: 4.1.1
+  resolution: "chalk@npm:4.1.1"
   dependencies:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
-  checksum: f860285b419f9e925c2db0f45ffa88aa8794c14b80cc5d01ff30930bcfc384996606362706f0829cf557f6d36152a5fb2d227ad63c4bc90e2ec9e9dbed4a3c07
+  checksum: 445c12db7aeed0046500a1e4184d31209a77d165654c885a789c41c8598a6a95bd2392180987cac572c967b93a2a730dda778bb7f87fa06ca63fd8592f8cc59f
   languageName: node
   linkType: hard
 
@@ -2760,9 +2760,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.12.4, mongoose@npm:^5.12.4":
-  version: 5.12.4
-  resolution: "mongoose@npm:5.12.4"
+"mongoose@npm:5.12.5, mongoose@npm:^5.12.5":
+  version: 5.12.5
+  resolution: "mongoose@npm:5.12.5"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -2776,7 +2776,7 @@ fsevents@~2.3.1:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 8965a43e3202f6458e181be0f69198d6382de76f728cc7b733fe169371e08750ef483f6f58dbf353892cde3e42133b973c1add7a8375e78f2e410b372a328efa
+  checksum: 2f6c627518a85adf9721e750a5434b23ddc99e24fc90543bc132ebe767ca6512dc296d1cccd00df76bc82bc615e3c638acd0f7db58123e71ccee965a8a404d00
   languageName: node
   linkType: hard
 
@@ -3378,11 +3378,11 @@ fsevents@~2.3.1:
     express: ^4.17.1
     express-winston: ^4.1.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^5.12.4
+    mongoose: ^5.12.5
     node-gyp: ^8.0.0
     nodemon: ^2.0.7
     prettier: ^2.2.1
-    validator: ^13.5.2
+    validator: ^13.6.0
     winston: ^3.3.3
   languageName: unknown
   linkType: soft
@@ -3966,8 +3966,8 @@ fsevents@~2.3.1:
   linkType: hard
 
 "table@npm:^6.0.4":
-  version: 6.1.0
-  resolution: "table@npm:6.1.0"
+  version: 6.3.2
+  resolution: "table@npm:6.3.2"
   dependencies:
     ajv: ^8.0.1
     is-boolean-object: ^1.1.0
@@ -3978,7 +3978,7 @@ fsevents@~2.3.1:
     lodash.truncate: ^4.4.2
     slice-ansi: ^4.0.0
     string-width: ^4.2.0
-  checksum: 18d2dc857063e602730aeb1ed7216dcc2b491ce4ba8087c941b10ce2373c06398e94fef04b407168d6b8d8afc4134050fe3b3500aecfdaf602c5313929943a55
+  checksum: 8c016c3f92e87fe1f11623c73eb7bc7e1a4574415952942b9cb9722d2ed70c197a0abe21ef06b1b490f90af3abf9dc2378d8f5bb3624a38faee8640bada43bd1
   languageName: node
   linkType: hard
 
@@ -4237,10 +4237,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"validator@npm:^13.5.2":
-  version: 13.5.2
-  resolution: "validator@npm:13.5.2"
-  checksum: 6da12682ad43456cb3a97d23b35cad0b438d9027a6c6fd824d5c86fead42c28f4e38c67590d8f56ab44e6c612979cbaa5f5cc670cc5fcc5a39d5032fcb642296
+"validator@npm:^13.6.0":
+  version: 13.6.0
+  resolution: "validator@npm:13.6.0"
+  checksum: 6ae43bfd47ae7e3ed5803c6fff949c5cbabb4d248af38fce0ccafb637c85db8c0c5cee2a91817242865de4f5970d61de809f0975910ec78282307ffd23249466
   languageName: node
   linkType: hard
 
