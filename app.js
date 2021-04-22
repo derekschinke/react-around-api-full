@@ -4,6 +4,7 @@ const { celebrate, Joi, errors } = require('celebrate');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const slowDown = require('express-slow-down');
+const helmet = require('helmet');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -51,6 +52,8 @@ const speedLimiter = slowDown({
   delayMs: 500,
 });
 app.use(speedLimiter);
+
+app.use(helmet());
 
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
