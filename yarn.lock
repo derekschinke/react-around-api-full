@@ -711,6 +711,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clone@npm:^1.0.2":
+  version: 1.0.4
+  resolution: "clone@npm:1.0.4"
+  checksum: aaaa58f9906002d9c07630682536cb00581ee02d7a76cfa8573ad59784add4d5d6d4afe894c21899b974044f153f8c5c6419ffc8b1cdde61bf104ad52e3a185d
+  languageName: node
+  linkType: hard
+
 "code-point-at@npm:^1.0.0":
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
@@ -953,6 +960,15 @@ __metadata:
   version: 0.1.3
   resolution: "deep-is@npm:0.1.3"
   checksum: 3de58f86af4dec86c8be531a5abaf2e6d8ea98fa2f1d81a3a778d0d8df920ee282043a6ef05bfb4eb699c8551df9ac1b808d4dc71d54cc40ab1efa5ce8792943
+  languageName: node
+  linkType: hard
+
+"defaults@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "defaults@npm:1.0.3"
+  dependencies:
+    clone: ^1.0.2
+  checksum: 974f63dd0acb79d14e94ac0f2ea69a880ab2a6e4b341bb9bdc2409b4091b928abe2709a4e140528948d02f29c286efdef22851d1dc972636eed2ce8e1c5b7465
   languageName: node
   linkType: hard
 
@@ -1431,6 +1447,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-rate-limit@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "express-rate-limit@npm:5.2.6"
+  checksum: 03cfcd8b039b08be5ffa1edbdc9b0a2eb5199ba4687bfb6d52e7327827eb1e17f612f497ffd6182e1521438cc18ea0bce062500e21af2ce0b2a0b2b59946cd8f
+  languageName: node
+  linkType: hard
+
+"express-slow-down@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "express-slow-down@npm:1.4.0"
+  dependencies:
+    defaults: ^1.0.3
+  checksum: b8518c2e587549d67ec45cbf693291443700a3f6646229364bbe06a2c71589abf586c3a655a203a2a83d3fdeb92f66b3be640a43fa47f7d4ddfaae38af490234
+  languageName: node
+  linkType: hard
+
 "express-winston@npm:^4.1.0":
   version: 4.1.0
   resolution: "express-winston@npm:4.1.0"
@@ -1820,6 +1852,13 @@ fsevents@~2.3.1:
   dependencies:
     function-bind: ^1.1.1
   checksum: c686e15300d41364486c099a9259d9c418022c294244843dcd712c4c286ff839d4f23a25413baa28c4d2c1e828afc2aaab70f685400b391533980223c71fa1ca
+  languageName: node
+  linkType: hard
+
+"helmet@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "helmet@npm:4.5.0"
+  checksum: e7245be78a024bc4536d9f9f81a02ff856a671f300a3865f625942b73a0f9ef161660cd9c7eb7f380de174fdfb1067af05ca5c4af2682d4ac9c068f5bdb6695f
   languageName: node
   linkType: hard
 
@@ -2858,7 +2897,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:^8.0.0, node-gyp@npm:latest":
+"node-gyp@npm:latest":
   version: 8.0.0
   resolution: "node-gyp@npm:8.0.0"
   dependencies:
@@ -3376,10 +3415,12 @@ fsevents@~2.3.1:
     eslint-plugin-import: ^2.22.1
     eslint-plugin-prettier: ^3.4.0
     express: ^4.17.1
+    express-rate-limit: ^5.2.6
+    express-slow-down: ^1.4.0
     express-winston: ^4.1.0
+    helmet: ^4.5.0
     jsonwebtoken: ^8.5.1
     mongoose: ^5.12.5
-    node-gyp: ^8.0.0
     nodemon: ^2.0.7
     prettier: ^2.2.1
     validator: ^13.6.0
@@ -3966,19 +4007,16 @@ fsevents@~2.3.1:
   linkType: hard
 
 "table@npm:^6.0.4":
-  version: 6.3.2
-  resolution: "table@npm:6.3.2"
+  version: 6.3.3
+  resolution: "table@npm:6.3.3"
   dependencies:
     ajv: ^8.0.1
-    is-boolean-object: ^1.1.0
-    is-number-object: ^1.0.4
-    is-string: ^1.0.5
     lodash.clonedeep: ^4.5.0
     lodash.flatten: ^4.4.0
     lodash.truncate: ^4.4.2
     slice-ansi: ^4.0.0
     string-width: ^4.2.0
-  checksum: 8c016c3f92e87fe1f11623c73eb7bc7e1a4574415952942b9cb9722d2ed70c197a0abe21ef06b1b490f90af3abf9dc2378d8f5bb3624a38faee8640bada43bd1
+  checksum: 67d7c29c6225657bc678a32b51df05c42fe923c8b30b6b0141f08c36e0a36c90446b39a441569ff982f1f6a17ffba44c94baf7278e9de98d526d4b3d6ddd0644
   languageName: node
   linkType: hard
 

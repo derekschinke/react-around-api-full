@@ -1,7 +1,7 @@
 const BadRequestError = require('../errors/BadRequestError');
+const ForbiddenError = require('../errors/ForbiddenError');
 const InternalServerError = require('../errors/InternalServerError');
 const NotFoundError = require('../errors/NotFoundError');
-const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const Card = require('../models/card');
 
@@ -40,7 +40,7 @@ module.exports.deleteCard = (req, res, next) => {
       } else if (!card) {
         throw new NotFoundError('Card not found');
       } else {
-        throw new UnauthorizedError('Authorization required');
+        throw new ForbiddenError('Insufficient rights to card');
       }
     })
     .catch((err) => {

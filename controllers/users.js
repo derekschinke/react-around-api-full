@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv');
 
 const BadRequestError = require('../errors/BadRequestError');
 const ConflictError = require('../errors/ConflictError');
@@ -10,7 +9,6 @@ const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const User = require('../models/user');
 
-dotenv.config();
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports.createUser = (req, res, next) => {
@@ -19,7 +17,9 @@ module.exports.createUser = (req, res, next) => {
     .hash(password, 10)
     .then((hash) => User.create({ name, about, avatar, email, password: hash }))
     .then((user) => {
-      res.status(201).send({ data: user });
+      const cleanedUser = user.toObject();
+      delete cleanedUser.password;
+      res.status(201).send({ data: cleanedUser });
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {

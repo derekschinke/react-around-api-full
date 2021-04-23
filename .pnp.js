@@ -48,10 +48,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:2.22.1"],
             ["eslint-plugin-prettier", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:3.4.0"],
             ["express", "npm:4.17.1"],
+            ["express-rate-limit", "npm:5.2.6"],
+            ["express-slow-down", "npm:1.4.0"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
+            ["helmet", "npm:4.5.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.5"],
-            ["node-gyp", "npm:8.0.0"],
             ["nodemon", "npm:2.0.7"],
             ["prettier", "npm:2.2.1"],
             ["validator", "npm:13.6.0"],
@@ -852,6 +854,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["clone", [
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/clone-npm-1.0.4-a610fcbcf9-aaaa58f990.zip/node_modules/clone/",
+          "packageDependencies": [
+            ["clone", "npm:1.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["clone-response", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/clone-response-npm-1.0.2-135ae8239d-71832f9219.zip/node_modules/clone-response/",
@@ -1182,6 +1193,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["defaults", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/defaults-npm-1.0.3-e829107b9e-974f63dd0a.zip/node_modules/defaults/",
+          "packageDependencies": [
+            ["defaults", "npm:1.0.3"],
+            ["clone", "npm:1.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["defer-to-connect", [
         ["npm:1.1.3", {
           "packageLocation": "./.yarn/cache/defer-to-connect-npm-1.1.3-5887885147-d8632cafae.zip/node_modules/defer-to-connect/",
@@ -1507,7 +1528,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.3.5"],
             ["strip-ansi", "npm:6.0.0"],
             ["strip-json-comments", "npm:3.1.1"],
-            ["table", "npm:6.3.2"],
+            ["table", "npm:6.3.3"],
             ["text-table", "npm:0.2.0"],
             ["v8-compile-cache", "npm:2.3.0"]
           ],
@@ -1798,6 +1819,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-is", "npm:1.6.18"],
             ["utils-merge", "npm:1.0.1"],
             ["vary", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["express-rate-limit", [
+        ["npm:5.2.6", {
+          "packageLocation": "./.yarn/cache/express-rate-limit-npm-5.2.6-c458b4bca7-03cfcd8b03.zip/node_modules/express-rate-limit/",
+          "packageDependencies": [
+            ["express-rate-limit", "npm:5.2.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["express-slow-down", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/express-slow-down-npm-1.4.0-51d492c66e-b8518c2e58.zip/node_modules/express-slow-down/",
+          "packageDependencies": [
+            ["express-slow-down", "npm:1.4.0"],
+            ["defaults", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -2209,6 +2249,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/has-yarn-npm-2.1.0-b73f6750d9-105682f263.zip/node_modules/has-yarn/",
           "packageDependencies": [
             ["has-yarn", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["helmet", [
+        ["npm:4.5.0", {
+          "packageLocation": "./.yarn/cache/helmet-npm-4.5.0-3542ad91ae-e7245be78a.zip/node_modules/helmet/",
+          "packageDependencies": [
+            ["helmet", "npm:4.5.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4017,10 +4066,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:2.22.1"],
             ["eslint-plugin-prettier", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:3.4.0"],
             ["express", "npm:4.17.1"],
+            ["express-rate-limit", "npm:5.2.6"],
+            ["express-slow-down", "npm:1.4.0"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
+            ["helmet", "npm:4.5.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.5"],
-            ["node-gyp", "npm:8.0.0"],
             ["nodemon", "npm:2.0.7"],
             ["prettier", "npm:2.2.1"],
             ["validator", "npm:13.6.0"],
@@ -4652,14 +4703,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["table", [
-        ["npm:6.3.2", {
-          "packageLocation": "./.yarn/cache/table-npm-6.3.2-4f4c276a65-8c016c3f92.zip/node_modules/table/",
+        ["npm:6.3.3", {
+          "packageLocation": "./.yarn/cache/table-npm-6.3.3-cbaedf7787-67d7c29c62.zip/node_modules/table/",
           "packageDependencies": [
-            ["table", "npm:6.3.2"],
+            ["table", "npm:6.3.3"],
             ["ajv", "npm:8.1.0"],
-            ["is-boolean-object", "npm:1.1.0"],
-            ["is-number-object", "npm:1.0.4"],
-            ["is-string", "npm:1.0.5"],
             ["lodash.clonedeep", "npm:4.5.0"],
             ["lodash.flatten", "npm:4.4.0"],
             ["lodash.truncate", "npm:4.4.2"],
