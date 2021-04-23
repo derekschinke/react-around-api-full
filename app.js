@@ -18,6 +18,7 @@ const cardRouter = require('./routers/cards');
 
 const { createUser, login } = require('./controllers/users');
 const NotFoundError = require('./errors/NotFoundError');
+const { serverErrorHandler } = require('./utils/serverErrorHandler');
 
 const { PORT = 3001, NODE_ENV, MONGO_SECRET } = process.env;
 
@@ -103,10 +104,7 @@ app.use('*', (req, res, next) =>
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message } = err;
-  res.status(statusCode).send({
-    message: statusCode === 500 ? 'An error occurred on the server' : message,
-  });
+  serverErrorHandler(err, res);
 });
 
 app.listen(process.env.PORT || PORT, () => {
