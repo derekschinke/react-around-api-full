@@ -2799,9 +2799,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.12.5, mongoose@npm:^5.12.5":
-  version: 5.12.5
-  resolution: "mongoose@npm:5.12.5"
+"mongoose@npm:5.12.7, mongoose@npm:^5.12.7":
+  version: 5.12.7
+  resolution: "mongoose@npm:5.12.7"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -2813,9 +2813,9 @@ fsevents@~2.3.1:
     ms: 2.1.2
     regexp-clone: 1.0.0
     safe-buffer: 5.2.1
-    sift: 7.0.1
+    sift: 13.5.2
     sliced: 1.0.1
-  checksum: 2f6c627518a85adf9721e750a5434b23ddc99e24fc90543bc132ebe767ca6512dc296d1cccd00df76bc82bc615e3c638acd0f7db58123e71ccee965a8a404d00
+  checksum: 0f9403ac8fc773e29373bb184a291dbbe2162144e0d2ed8a1ad351947943b343bc4214fce528e503298b1663030273332a13b945811fbd46fc988480997162f6
   languageName: node
   linkType: hard
 
@@ -3420,7 +3420,7 @@ fsevents@~2.3.1:
     express-winston: ^4.1.0
     helmet: ^4.5.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^5.12.5
+    mongoose: ^5.12.7
     nodemon: ^2.0.7
     prettier: ^2.2.1
     validator: ^13.6.0
@@ -3708,10 +3708,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sift@npm:7.0.1":
-  version: 7.0.1
-  resolution: "sift@npm:7.0.1"
-  checksum: 267d30f964324df4e55152d977cdca8da0a04e24f82c0ae0737d0dc771f613a415f5d26ad97ed5bcedbb032be2dfd78da9e4060b6131b4ee7cb0bd09e1095cf8
+"sift@npm:13.5.2":
+  version: 13.5.2
+  resolution: "sift@npm:13.5.2"
+  checksum: 5c005114f85f6bacea5b21265c87b7a366f15eed992b24f6d4468056d241d072309e118795900f5e883c9952692d47ac35f92fcce9cc68c34c9eba9828dd4e1d
   languageName: node
   linkType: hard
 
