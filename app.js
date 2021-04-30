@@ -56,7 +56,7 @@ app.use(speedLimiter);
 
 app.use(helmet());
 
-app.use(express.json({ extended: true }));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(requestLogger);
