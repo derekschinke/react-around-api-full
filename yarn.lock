@@ -14,21 +14,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-validator-identifier@npm:^7.12.11":
-  version: 7.12.11
-  resolution: "@babel/helper-validator-identifier@npm:7.12.11"
-  checksum: 18de432203264b501db2690b53370a4289dc56084f5a2c66de624b159ee28b8abaeb402b2b7584296d9261645d91ddb6bfd21125d3ffd9bf02e9262e77baf3d2
+"@babel/helper-validator-identifier@npm:^7.14.0":
+  version: 7.14.0
+  resolution: "@babel/helper-validator-identifier@npm:7.14.0"
+  checksum: bd67b4a1a49eba151aa0fe95508579638287fee0a3e7a3bf8c5ab480de8eaad4b4231c523d7db401eb0cecc7cf03b76ee72453fab53bab8cb8ccd154bb67feb7
   languageName: node
   linkType: hard
 
 "@babel/highlight@npm:^7.10.4":
-  version: 7.13.10
-  resolution: "@babel/highlight@npm:7.13.10"
+  version: 7.14.0
+  resolution: "@babel/highlight@npm:7.14.0"
   dependencies:
-    "@babel/helper-validator-identifier": ^7.12.11
+    "@babel/helper-validator-identifier": ^7.14.0
     chalk: ^2.0.0
     js-tokens: ^4.0.0
-  checksum: 8f23d3b728422713bfab45bee1e7584f2a3d2e20c9c4d6153312b898c82e776bdc5b1b2afaf9433fddb21d70417f5b477c0bb1a48613324fd761117e19a5702b
+  checksum: 0122fcd3cd6e81bfa002227d6c9dfff91d388d48dc188cd13e3f60c46e5450ebad65aa133ac8f525cb3cfa3b70766484e4a93c40b2837ce16f12083ebd2b0824
   languageName: node
   linkType: hard
 
@@ -187,9 +187,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 15.0.0
-  resolution: "@types/node@npm:15.0.0"
-  checksum: 9d3ced65feb73444056941cc7bcbbc4885b60fb22ba3c38e1ad26c96909dd914e1d87fa4c22a5dbada8588606c56116bbd6d42569e87513866919b801e314d2e
+  version: 15.0.1
+  resolution: "@types/node@npm:15.0.1"
+  checksum: 4e4fb69394efb224272ad7c6b6dc16a381b97e46a8f3c21d33fec51ef13a4d635f571b446d127eae333ea6a763f304b787f4b3f73e24e1f3b05a21b481900dfb
   languageName: node
   linkType: hard
 
@@ -280,14 +280,14 @@ __metadata:
   linkType: hard
 
 "ajv@npm:^8.0.1":
-  version: 8.1.0
-  resolution: "ajv@npm:8.1.0"
+  version: 8.2.0
+  resolution: "ajv@npm:8.2.0"
   dependencies:
     fast-deep-equal: ^3.1.1
     json-schema-traverse: ^1.0.0
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
-  checksum: d946a17d0f44418863d23282868ce79c51ba3a3ca9cca4eb9a0e66151c9f8cf790febb4a1ffe5a831a52d21639d3e140586736406cdde177a804aebacd45f2ca
+  checksum: 949f891686134c49c9c98c401d29ccd9e0cbd5d2c76163edd21c3c6bea694a4f7e5108fdc0c55b4cc90de85c93a9356fc30b3a7fab222721db3e38c585c61053
   languageName: node
   linkType: hard
 
