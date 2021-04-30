@@ -56,7 +56,7 @@ module.exports.login = (req, res, next) => {
       );
 
       res.header('authorization', `Bearer ${token}`);
-      res.cookie('token', token, { httpOny: true });
+      res.cookie('token', token, { httpOnly: true });
       res.status(200).send({ token });
     })
     .catch(next);
