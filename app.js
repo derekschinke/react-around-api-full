@@ -26,7 +26,7 @@ const app = express();
 
 const mongodbUri =
   NODE_ENV === 'production'
-    ? `mongodb+srv://derekschinke:${MONGO_SECRET}@arounddb.0zhvm.mongodb.net/arounddb?retryWrites=true&w=majority`
+    ? `mongodb+srv://derekschinke:${MONGO_SECRET}@practicum.0zhvm.mongodb.net/arounddb?retryWrites=true&w=majority`
     : 'mongodb://localhost:27017/arounddb';
 
 mongoose.connect(mongodbUri, {
@@ -56,7 +56,7 @@ app.use(speedLimiter);
 
 app.use(helmet());
 
-app.use(express.json({ extended: true }));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(requestLogger);
