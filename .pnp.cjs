@@ -49,7 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-rate-limit", "npm:5.2.6"],
             ["express-slow-down", "npm:1.4.0"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
-            ["helmet", "npm:4.5.0"],
+            ["helmet", "npm:4.6.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.7"],
             ["node-gyp", "npm:8.0.0"],
@@ -1503,7 +1503,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enquirer", "npm:2.3.6"],
             ["eslint-scope", "npm:5.1.1"],
             ["eslint-utils", "npm:2.1.0"],
-            ["eslint-visitor-keys", "npm:2.0.0"],
+            ["eslint-visitor-keys", "npm:2.1.0"],
             ["espree", "npm:7.3.1"],
             ["esquery", "npm:1.4.0"],
             ["esutils", "npm:2.0.3"],
@@ -1700,10 +1700,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/eslint-visitor-keys-npm-2.0.0-5c9523822c-e07e9863fb.zip/node_modules/eslint-visitor-keys/",
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/eslint-visitor-keys-npm-2.1.0-c31806b6b9-e3081d7dd2.zip/node_modules/eslint-visitor-keys/",
           "packageDependencies": [
-            ["eslint-visitor-keys", "npm:2.0.0"]
+            ["eslint-visitor-keys", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2253,10 +2253,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["helmet", [
-        ["npm:4.5.0", {
-          "packageLocation": "./.yarn/cache/helmet-npm-4.5.0-3542ad91ae-95b2eddeb7.zip/node_modules/helmet/",
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/helmet-npm-4.6.0-f244fd965c-139ad678d1.zip/node_modules/helmet/",
           "packageDependencies": [
-            ["helmet", "npm:4.5.0"]
+            ["helmet", "npm:4.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4068,7 +4068,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-rate-limit", "npm:5.2.6"],
             ["express-slow-down", "npm:1.4.0"],
             ["express-winston", "virtual:55ad38358a0baf52d82ce41e4695feb7fd223cbd4b011ddcf240fd1668c16c8c3e132f21b9e99dfc9599d46db94a4f89a9ecd53a32a4c094f386b67539c506df#npm:4.1.0"],
-            ["helmet", "npm:4.5.0"],
+            ["helmet", "npm:4.6.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["mongoose", "npm:5.12.7"],
             ["node-gyp", "npm:8.0.0"],

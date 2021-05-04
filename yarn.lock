@@ -1327,9 +1327,9 @@ __metadata:
   linkType: hard
 
 "eslint-visitor-keys@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "eslint-visitor-keys@npm:2.0.0"
-  checksum: e07e9863fb8c9b1453f5ad1a26f3cc8dd6b349b26605cc06bc0c61215ac5b6f13a4d08c875218e6c0f8ac8fc06ca6e090df769e32c569f0fd2e6a848b8a76c75
+  version: 2.1.0
+  resolution: "eslint-visitor-keys@npm:2.1.0"
+  checksum: e3081d7dd2611a35f0388bbdc2f5da60b3a3c5b8b6e928daffff7391146b434d691577aa95064c8b7faad0b8a680266bcda0a42439c18c717b80e6718d7e267d
   languageName: node
   linkType: hard
 
@@ -1856,9 +1856,9 @@ fsevents@~2.3.1:
   linkType: hard
 
 "helmet@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "helmet@npm:4.5.0"
-  checksum: 95b2eddeb7811ad34135a96b192cab1c630f946f5e0dd86461da70f1fed76732129663b73bdf53550ab13e6f2137e692e4f2925bbb10132754066d63d408fe1f
+  version: 4.6.0
+  resolution: "helmet@npm:4.6.0"
+  checksum: 139ad678d1cab207b043c206f50f6744eff2ef1f463e4626d36718b45b337485c77d10260ef9d89d292fa678da5153d86b08172b3b365cc8e680241015ed3a49
   languageName: node
   linkType: hard
 
