@@ -1261,9 +1261,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.23.3":
-  version: 2.23.3
-  resolution: "eslint-plugin-import@npm:2.23.3"
+"eslint-plugin-import@npm:^2.23.4":
+  version: 2.23.4
+  resolution: "eslint-plugin-import@npm:2.23.4"
   dependencies:
     array-includes: ^3.1.3
     array.prototype.flat: ^1.2.4
@@ -1282,7 +1282,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
-  checksum: ed77042d30cba1d831036533912861b12c6a5291dc05f3cbc8bae0614922dafc5d2246256c2b5090327cf0fc8805b93892ee1c0c355b6f1b87ed9183b4038348
+  checksum: 8c64bb96fa35607de3da1ddf5d127a5913aebde5677bc276c55fecb3e539a7287569dc697af4f5c523bd2b08bff8f5b525448df5aa7d6256c86436b615be5abc
   languageName: node
   linkType: hard
 
@@ -1624,10 +1624,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"forwarded@npm:~0.1.2":
-  version: 0.1.2
-  resolution: "forwarded@npm:0.1.2"
-  checksum: 54695c574292f9bc6bfa52111844337bc2e61cfcc5ec82f16b816d721a67a0c76b4849a34b57e38e51d64ddbb81aef974f393579f610ed1b990470e75abad2e0
+"forwarded@npm:0.2.0":
+  version: 0.2.0
+  resolution: "forwarded@npm:0.2.0"
+  checksum: fd27e2394d8887ebd16a66ffc889dc983fbbd797d5d3f01087c020283c0f019a7d05ee85669383d8e0d216b116d720fc0cef2f6e9b7eb9f4c90c6e0bc7fd28e6
   languageName: node
   linkType: hard
 
@@ -2643,19 +2643,19 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mime-db@npm:1.47.0":
-  version: 1.47.0
-  resolution: "mime-db@npm:1.47.0"
-  checksum: 6808235243c39b3142e677af86972cf32de8ebbec81178491475a79aa07caf67646cd9b559972d22c3c372ddca4a093e58bb0ba10376d75a1efbd0e07be82de2
+"mime-db@npm:1.48.0":
+  version: 1.48.0
+  resolution: "mime-db@npm:1.48.0"
+  checksum: d778392e474a5e78c24eef5a2894261f0ed168d2762c1ac2a115aa34c2274c9426178b92a6cc55e9edb8f13e7e9b8116380b0e61db9ff6d763e62876a65eea57
   languageName: node
   linkType: hard
 
 "mime-types@npm:~2.1.24":
-  version: 2.1.30
-  resolution: "mime-types@npm:2.1.30"
+  version: 2.1.31
+  resolution: "mime-types@npm:2.1.31"
   dependencies:
-    mime-db: 1.47.0
-  checksum: 53c36729b1c4f6029fd5957d5859e62eff4b86311a6e1dce87937583dc8971fec9f359ffcff4be93d26bb5ddd03f1b5ffc7626912031ce0a63510d7896521b2e
+    mime-db: 1.48.0
+  checksum: eb1612aa96403823c7a2ccb1a39d58ce11477e685560186e7d369d8164260fd6fc1eeb56fa23acb6a4050583f417b2a685b69c23eb2bd8ed169fb0c6e323740a
   languageName: node
   linkType: hard
 
@@ -3336,12 +3336,12 @@ fsevents@~2.3.1:
   linkType: hard
 
 "proxy-addr@npm:~2.0.5":
-  version: 2.0.6
-  resolution: "proxy-addr@npm:2.0.6"
+  version: 2.0.7
+  resolution: "proxy-addr@npm:2.0.7"
   dependencies:
-    forwarded: ~0.1.2
+    forwarded: 0.2.0
     ipaddr.js: 1.9.1
-  checksum: 2bad9b7a56b847faf606a19328aaaf5fca3e561ebb4e933969a580d94a20f77e74fb21196028a6e417851b3d9d95a0c704732a3362e3ef515d45d96859ac7eb9
+  checksum: 29c6990ce9364648255454842f06f8c46fcd124d3e6d7c5066df44662de63cdc0bad032e9bf5a3d653ff72141cc7b6019873d685708ac8210c30458ad99f2b74
   languageName: node
   linkType: hard
 
@@ -3430,7 +3430,7 @@ fsevents@~2.3.1:
     eslint-config-airbnb-base: ^14.2.1
     eslint-config-prettier: ^8.3.0
     eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.3
+    eslint-plugin-import: ^2.23.4
     eslint-plugin-prettier: ^3.4.0
     express: ^4.17.1
     express-rate-limit: ^5.2.6
