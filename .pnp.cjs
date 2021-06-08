@@ -231,7 +231,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-bson-npm-4.0.3-4ec8c44242-38e80ef424.zip/node_modules/@types/bson/",
           "packageDependencies": [
             ["@types/bson", "npm:4.0.3"],
-            ["@types/node", "npm:15.12.1"]
+            ["@types/node", "npm:15.12.2"]
           ],
           "linkType": "HARD",
         }]
@@ -250,7 +250,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-keyv-npm-3.1.1-779a80f2c7-ee0d098693.zip/node_modules/@types/keyv/",
           "packageDependencies": [
             ["@types/keyv", "npm:3.1.1"],
-            ["@types/node", "npm:15.12.1"]
+            ["@types/node", "npm:15.12.2"]
           ],
           "linkType": "HARD",
         }]
@@ -261,16 +261,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/mongodb", "npm:3.6.17"],
             ["@types/bson", "npm:4.0.3"],
-            ["@types/node", "npm:15.12.1"]
+            ["@types/node", "npm:15.12.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/node", [
-        ["npm:15.12.1", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-15.12.1-149da5b459-a8eb7b5bbd.zip/node_modules/@types/node/",
+        ["npm:15.12.2", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-15.12.2-0d3ff66ec0-0dff080f30.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:15.12.1"]
+            ["@types/node", "npm:15.12.2"]
           ],
           "linkType": "HARD",
         }]
@@ -280,7 +280,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-responselike-npm-1.0.0-85dd08af42-e99fc7cc62.zip/node_modules/@types/responselike/",
           "packageDependencies": [
             ["@types/responselike", "npm:1.0.0"],
-            ["@types/node", "npm:15.12.1"]
+            ["@types/node", "npm:15.12.2"]
           ],
           "linkType": "HARD",
         }]
@@ -381,10 +381,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.5.0", {
-          "packageLocation": "./.yarn/cache/ajv-npm-8.5.0-66afc3cb37-0115531d0f.zip/node_modules/ajv/",
+        ["npm:8.6.0", {
+          "packageLocation": "./.yarn/cache/ajv-npm-8.6.0-74c534c16b-4cc0ca6c60.zip/node_modules/ajv/",
           "packageDependencies": [
-            ["ajv", "npm:8.5.0"],
+            ["ajv", "npm:8.6.0"],
             ["fast-deep-equal", "npm:3.1.3"],
             ["json-schema-traverse", "npm:1.0.0"],
             ["require-from-string", "npm:2.0.2"],
@@ -4730,7 +4730,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/table-npm-6.7.1-7d70e55c6d-053b61fa4e.zip/node_modules/table/",
           "packageDependencies": [
             ["table", "npm:6.7.1"],
-            ["ajv", "npm:8.5.0"],
+            ["ajv", "npm:8.6.0"],
             ["lodash.clonedeep", "npm:4.5.0"],
             ["lodash.truncate", "npm:4.4.2"],
             ["slice-ansi", "npm:4.0.0"],
