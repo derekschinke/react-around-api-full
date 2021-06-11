@@ -66,26 +66,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@babel-code-frame-npm-7.12.11-1a9a1b277f-3963eff3eb.zip/node_modules/@babel/code-frame/",
           "packageDependencies": [
             ["@babel/code-frame", "npm:7.12.11"],
-            ["@babel/highlight", "npm:7.14.0"]
+            ["@babel/highlight", "npm:7.14.5"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@babel/helper-validator-identifier", [
-        ["npm:7.14.0", {
-          "packageLocation": "./.yarn/cache/@babel-helper-validator-identifier-npm-7.14.0-88c0d4b395-6276d57677.zip/node_modules/@babel/helper-validator-identifier/",
+        ["npm:7.14.5", {
+          "packageLocation": "./.yarn/cache/@babel-helper-validator-identifier-npm-7.14.5-d29d30a813-6366bceab4.zip/node_modules/@babel/helper-validator-identifier/",
           "packageDependencies": [
-            ["@babel/helper-validator-identifier", "npm:7.14.0"]
+            ["@babel/helper-validator-identifier", "npm:7.14.5"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@babel/highlight", [
-        ["npm:7.14.0", {
-          "packageLocation": "./.yarn/cache/@babel-highlight-npm-7.14.0-54986133d5-5aae226c0d.zip/node_modules/@babel/highlight/",
+        ["npm:7.14.5", {
+          "packageLocation": "./.yarn/cache/@babel-highlight-npm-7.14.5-4a18106cbc-4e4b22fb88.zip/node_modules/@babel/highlight/",
           "packageDependencies": [
-            ["@babel/highlight", "npm:7.14.0"],
-            ["@babel/helper-validator-identifier", "npm:7.14.0"],
+            ["@babel/highlight", "npm:7.14.5"],
+            ["@babel/helper-validator-identifier", "npm:7.14.5"],
             ["chalk", "npm:2.4.2"],
             ["js-tokens", "npm:4.0.0"]
           ],
