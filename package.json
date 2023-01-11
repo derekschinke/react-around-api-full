@@ -30,7 +30,7 @@
     "express-slow-down": "^1.4.0",
     "express-winston": "^4.2.0",
     "helmet": "^4.6.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.0.6",
     "node-gyp": "^8.2.0",
     "validator": "^13.6.0",
